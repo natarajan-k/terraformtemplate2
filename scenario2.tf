@@ -40,7 +40,8 @@ resource "ibm_compute_ssh_key" "orpheus_public_key" {
 # Create a new virtual guest using image "Debian"
 resource "ibm_compute_vm_instance" "debian_small_virtual_guest" {
   hostname                 = "${var.first_hostname}"
-  image_id                 = "${data.ibm_compute_image_template.debian_8_6_64.id}"
+#  image_id                 = "${data.ibm_compute_image_template.debian_8_6_64.id}"
+  os_reference_code        = "UBUNTU_16_64"
   domain                   = "${var.domain}"
   datacenter               = "${var.datacenter}"
   network_speed            = 10
