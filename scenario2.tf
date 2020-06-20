@@ -26,9 +26,9 @@ variable "domain" {
   description = "VM domain"
 }
 
-data "ibm_compute_image_template" "debian_8_6_64" {
-  name = "100GB - Debian / Debian / 8.0.0-64 Minimal for VSI"
-}
+#data "ibm_compute_image_template" "debian_8_6_64" {
+#  name = "100GB - Debian / Debian / 8.0.0-64 Minimal for VSI"
+#}
 
 # This will create a new SSH key that will show up under the \
 # Devices>Manage>SSH Keys in the SoftLayer console.
